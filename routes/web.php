@@ -59,19 +59,21 @@ Route::get('/test-wa/{no}', function($no){
     } elseif($no == 'list'){
         $sections = collect(
             [
-                'title' => 'Unggulan',
-                'options' => [
-                    'Sekolah | Di kabupaten Merauke',
-                    'Rumah Sakit | Di kabupaten Merauke',
-                    'Penghijauan | Di kabupaten Merauke',
+                [
+                    'title' => 'Unggulan',
+                    'options' => [
+                        'Sekolah | Di kabupaten Merauke',
+                        'Rumah Sakit | Di kabupaten Merauke',
+                        'Penghijauan | Di kabupaten Merauke',
+                    ],
                 ],
-            ],
-            [
-                'title' => 'Pembangunan',
-                'options' => [
-                    'Jembatan | Pembangunan jembatan',
-                    'Jalan | Pembangunan Jalan',
-                ],
+                [
+                    'title' => 'Pembangunan',
+                    'options' => [
+                        'Jembatan | Pembangunan jembatan',
+                        'Jalan | Pembangunan Jalan',
+                    ],
+                ]
             ]
         )
         ->map(function($item, $key){
