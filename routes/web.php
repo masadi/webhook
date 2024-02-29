@@ -27,7 +27,6 @@ image
 document
 */
 Route::get('/test-wa/{no}', function($no){
-    dd(url('images/bayi.jpg'));
     if($no == 'text'){
         $messageData = [
             'type' 		=> 'text',
